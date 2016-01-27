@@ -1,3 +1,5 @@
+require_relative '../../tests/pages/base_page'
+
 class ManagementTeamPage < BasePage
   def initialize(driver)
     super(driver)
