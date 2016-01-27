@@ -1,0 +1,2 @@
+class ManagementTeamPage
+end
