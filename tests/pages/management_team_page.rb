@@ -5,7 +5,13 @@ class ManagementTeamPage < BasePage
     super(driver)
   end
 
-  def getFirstImageOfManagementTeam
-    return @@driver.find_element(:css, '.w_content_generic:nth-child(2) img')
+  def is_first_image_present
+    element = @@driver.find_element(:css, '.w_content_generic:nth-child(2) img')
+    attribute = get_attribute('src')
+    if attribute.nil? || attribute.empty?
+      return false
+    end
+
+    return true
   end
 end
